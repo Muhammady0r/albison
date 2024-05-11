@@ -6,7 +6,7 @@ const HonorPage = () => {
 
   return (
     <>
-      <div className="h-12 sm:h-20 w-full my-[12.5px] md:my-[16.5px]"></div>
+      {/* <div className="h-12 sm:h-20 w-full my-[12.5px] md:my-[16.5px]"></div> */}
 
       <div className="bg-wework p-20">
         <p className="text-6xl font-medium text-center">Sharaf Kodeksi</p>

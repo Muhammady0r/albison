@@ -13,7 +13,7 @@ import Result from "./Result";
 const HomePage = () => {
   return (
     <>
-      <div className="h-12 sm:h-20 w-full my-[25px] md:my-[33px]"></div>
+      {/* <div className="h-12 sm:h-20 w-full my-[25px] md:my-[33px]"></div> */}
       <Showcase />
       <About />
       <Dev1 />

@@ -12,16 +12,28 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { Button, buttonVariants } from "@/components/ui/button";
 
-const Header = () => {
+const Header = ({ isTop }) => {
   const nav = useNavigate("/");
 
   return (
     <>
-      <nav className="navbar w-full fixed top-0 z-[99] bg-background shadow-xl">
+      <nav
+        className={`navbar w-full top-0 z-[99] transition-all ${
+          isTop ? "" : "fixed shadow-xl bg-background"
+        }`}
+      >
         <div className="mx-auto max-w-7xl p-3 md:p-4 min-[1150px]:px-8">
-          <div className="relative flex h-12 sm:h-20 items-center">
+          <div
+            className={`relative flex h-12 ${
+              isTop ? "sm:h-20" : "sm:h-12"
+            } items-center`}
+          >
             <div className="flex flex-1 items-center justify-between">
-              <div className="flex flex-shrink-0 items-center border-right max-[1150px]:border-none ">
+              <div
+                className={`flex flex-shrink-0 items-center border-right max-[1150px]:border-none ${
+                  isTop ? "" : "h-16"
+                }`}
+              >
                 <Link
                   className="text-2xl sm:text-4xl font-semibold text-black"
                   to="/"
@@ -32,7 +44,11 @@ const Header = () => {
                   Albison Academy
                 </Link>
               </div>
-              <div className="flex max-[1150px]:hidden items-center border-right">
+              <div
+                className={`flex max-[1150px]:hidden items-center border-right ${
+                  isTop ? "" : "h-16"
+                }`}
+              >
                 <div className="flex justify-end space-x-1">
                   <Link
                     className="text-gray-600 hover:text-black px-2 py-4 rounded-md text-lg font-normal"
